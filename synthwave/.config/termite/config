@@ -1,0 +1,49 @@
+[colors]
+# Outrun Theme
+# Author: Ryan Wise
+
+foreground          = #c9d6d9
+foreground_bold     = #2de2e6
+cursor              = #2de2e6
+cursor_foreground   = #002b36
+background          = rgba(13, 2, 33, 0.8)
+
+# 16 color space
+
+# Black, Gray, Silver, White
+color0  = #241734
+color8  = #758b93
+color7  = #d3e1e4
+color15 = #fdf6e3
+
+# Red
+color1  = #fd1d53
+color9  = #fd1d53
+
+# Green
+color2  = #fd3777
+color10 = #fd3777
+
+# Yellow
+color3  = #f9c80e
+color11	= #f9c80e
+
+# Blue - Cyan
+color4  = #2de2e6
+color12 = #2de2e6
+
+# Purple
+color5  = #f6019d
+color13 = #f6019d
+
+# Teal
+color6  = #2aa198
+color14 = #2aa198
+
+# Extra colors
+color16 = #cb4b16
+color17 = #d33682
+color18 = #073642
+color19 = #586e75
+color20 = #839496
+color21 = #eee8d5
