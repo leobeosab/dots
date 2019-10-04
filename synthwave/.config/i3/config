@@ -53,6 +53,9 @@ new_window 1pixel
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show run
+
+# start rofi with frequent command script
+bindsym $mod+g exec $HOME/.config/rofi/open_commands.sh
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
