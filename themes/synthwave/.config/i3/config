@@ -52,7 +52,7 @@ for_window [class="^.*"] border pixel 1
 new_window 1pixel
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun -show-icons -icon-theme la-capitaine
 
 # start rofi with frequent command script
 bindsym $mod+g exec $HOME/.config/rofi/open_commands.sh
