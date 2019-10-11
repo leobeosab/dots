@@ -28,4 +28,10 @@ function bgSet {
 	hsetroot -cover ~/.background
 }
 
+alias workerserver="ssh ryan@192.168.1.120 -i $HOME/Keys/workerserver"
+
+function crtsh {
+        curl -s https://crt.sh/?q=%.$1 | sed ‘s/<\/\?[^>]\+>//g’ | grep $1
+}
+
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/ryan/go/bin:/home/ryan/.vimpkg/bin"
