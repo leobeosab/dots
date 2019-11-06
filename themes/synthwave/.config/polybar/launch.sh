@@ -16,3 +16,4 @@ if type "xrandr"; then
 else
   polybar --reload -c ~/.config/polybar/config.ini main
 fi
+
