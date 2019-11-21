@@ -19,6 +19,25 @@ function viewmd {
 	rm tmp.html
 }
 
+# Note Stuff
+function leadingCaps {
+	awk '{for(i=0;++i<=NF;){OFS=(i==NF)?RS:FS;printf toupper(substr($i,0,1)) substr($i,2) OFS }}' <<< "$1"
+}
+
+function newNote {
+	d=`date +%Y-%m-%d`
+	cd $HOME/devnotes/_posts
+	cp template $d-$1.md
+	
+	formattedTitle="${1//-/ }"
+	formattedTitle="$(leadingCaps $formattedTitle)"
+
+	sed -i 's/title:/title: '"$formattedTitle"'/g' $d-$1.md
+	sed -i 's/date:/date: '"$d"'/g' $d-$1.md
+
+	vim $d-$1.md
+}
+
 alias workerserver="ssh ryan@192.168.1.120 -i $HOME/Keys/workerserver"
 alias list="vim $HOME/.list"
 alias c="clear"

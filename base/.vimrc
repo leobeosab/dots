@@ -6,8 +6,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'dracula/vim'
-Plugin 'townk/vim-autoclose'
-Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 
@@ -19,6 +17,11 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
+
+" Fixes
+" Fixes adding pumvisible while in insert mode with multiple tabs
+inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 
 "Pathogen setup
 execute pathogen#infect()
