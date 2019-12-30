@@ -15,7 +15,7 @@ archive_and_link() {
         NAME=$(basename $file)
         NEW_FILE=$OUT_DIR/$PRE$NAME
 
-        if [ -f -a "$NEW_FILE" ] && [ ! -L "$NEW_FILE"  ]
+        if [ -f -a "$NEW_FILE" ]
             then
             mv "$NEW_FILE" "$OLDDOTS/$NAME"
         fi

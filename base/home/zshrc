@@ -23,6 +23,11 @@ function viewmd {
 	rm tmp.html
 }
 
+function am { #runs amass passively and saves to json
+    amass enum --passive -d $1 -json $1.json
+    jq .name $1.json | sed "s/\"//g"| httprobe -c 60 | tee -a $1-domains.txt
+}
+
 # Note Stuff
 function leadingCaps {
 	awk '{for(i=0;++i<=NF;){OFS=(i==NF)?RS:FS;printf toupper(substr($i,0,1)) substr($i,2) OFS }}' <<< "$1"
@@ -40,6 +45,11 @@ function newNote {
 	sed -i 's/date:/date: '"$d"'/g' $d-$1.md
 
 	vim $d-$1.md
+}
+
+# Open termite with certain config
+function term {
+termite --config=$HOME/dots/themes/$1/config/termite/config
 }
 
 alias workerserver="ssh ryan@192.168.1.120 -i $HOME/Keys/workerserver"
