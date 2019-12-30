@@ -30,9 +30,11 @@ call pathogen#helptags()
 " Nerd-Tree Control+N
 map <C-n> :NERDTreeToggle<CR>
 
+" Tabline
+let g:airline#extensions#tabline#enabled = 1
+
 " The normies
 set number
 syntax on
 set tabstop=4
-" Set theme
-" color dracula
+set t_Co=256
