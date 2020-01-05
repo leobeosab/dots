@@ -27,6 +27,7 @@ Plugin 'dracula/vim'
 Plugin 'shougo/deoplete.nvim'
 Plugin 'roxma/nvim-yarp'
 Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 " END   Vundle
@@ -68,6 +69,8 @@ let g:deoplete#enable_at_startup = 1
 
 " START NerdTree
 "" open nerdtree on startup
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "" Control+N
 map <C-n> :NERDTreeToggle<CR>
 "" Quit on open
@@ -105,7 +108,6 @@ set tabstop=4
 "" Display tabs + color
 set list
 set listchars=tab:.\  
-highlight SpecialKey ctermfg=black
 "" Termcolors
 set t_Co=256
 set background=dark
@@ -113,4 +115,5 @@ let base16colorspace=256
 colorscheme bluewery
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
+hi SpecialKey ctermfg=black guifg=black
 " END   Colors
