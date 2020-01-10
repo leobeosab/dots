@@ -149,15 +149,15 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 workspace $ws1 output primary
-workspace $ws2 output secondary
+workspace $ws2 output HDMI2
 workspace $ws3 output primary
-workspace $ws4 output secondary
+workspace $ws4 output HDMI2
 workspace $ws5 output primary
-workspace $ws6 output secondary
+workspace $ws6 output HDMI2
 workspace $ws7 output primary
-workspace $ws8 output secondary
+workspace $ws8 output HDMI2
 workspace $ws9 output primary
-workspace $ws10 output secondary
+workspace $ws10 output HDMI2
 
 # border colors
 client.focused          #4c7899 #285577 #ffffff #2e9ef4   #3587a7
