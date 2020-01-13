@@ -109,6 +109,12 @@ set tabstop=4
 
 " ====================
 
+" START remaps
+inoremap <C-l> <Esc>
+" END   remaps
+
+" ====================
+
 " START Colors
 "" Display tabs + color
 set list
