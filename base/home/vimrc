@@ -23,6 +23,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'fatih/vim-go'
 Plugin 'stamblerre/gocode', {'rtp': 'vim/'}
 Plugin 'zchee/deoplete-go'
+Plugin 'relastle/bluewery'
 Plugin 'dracula/vim'
 Plugin 'shougo/deoplete.nvim'
 Plugin 'roxma/nvim-yarp'
