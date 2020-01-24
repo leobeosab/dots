@@ -23,3 +23,7 @@ No theme
 
 Theme
 `./create_sym_links.sh pixel`
+
+## vim notes
+Vim needs neo vim for some of its python dependencies. 
+`pip install neovim` should fix any errors
