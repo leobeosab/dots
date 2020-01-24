@@ -24,6 +24,10 @@ function viewmd {
 }
 
 # Hacking functions
+function godir {
+    gobuster dir -t 25 --wordlist ~/ostools/SecLists/Discovery/Web-Content/big.txt --url $1
+} # Starts a dir bust on url
+
 function wc64d {
     echo "\n"
     b64=$(node -e "console.log(decodeURIComponent(\"$1\"))")
