@@ -6,6 +6,11 @@ plugins=(git)
 export LC_CTYPE=en_US.UTF-8
 source $ZSH/oh-my-zsh.sh
 
+# Extra config files
+if [ -f ~/.machineconf ]; then
+    source ~/.machineconf
+fi
+
 # Exports
 export EDITOR='vim'
 
@@ -76,7 +81,7 @@ alias c="clear"
 alias gob="go build ./..." 
 
 # Path bullshit
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/ryan/.vimpkg/bin"
+export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/ryan/.vimpkg/bin"
 export PATH="$PATH:/root/.gem/ruby/2.6.0/bin"
 export PATH="$PATH:$HOME/go/bin"
 source /usr/share/nvm/init-nvm.sh
