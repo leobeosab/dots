@@ -1,2 +1,2 @@
-xrandr --auto --output DP1 --primary --right-of HDMI2
+xrandr --auto --output HDMI2 --primary --right-of HDMI1
 hsetroot -cover ~/.background 
