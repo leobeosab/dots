@@ -30,6 +30,8 @@ Plugin 'roxma/nvim-yarp'
 Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'pangloss/vim-javascript'
 call vundle#end()
 " END   Vundle
 
@@ -121,6 +123,7 @@ set tabstop=4
 
 " START remaps
 inoremap <C-l> <Esc>
+nnoremap <C-f> :FZF<CR>
 " END   remaps
 
 " ====================

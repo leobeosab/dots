@@ -75,14 +75,18 @@ function term {
 termite --config=$HOME/dots/themes/$1/config/termite/config
 }
 
+# Remove Vim cache
+alias rmvimcache="rm ~/.cache/vim/swap/*.swp"
+
 alias workerserver="ssh ryan@192.168.1.120 -i $HOME/Keys/workerserver"
 alias list="vim $HOME/.list"
 alias c="clear"
 alias gob="go build ./..." 
-alias butts="echo \"butts bitch\""
+alias xclip="xclip -selection c"
 
 # Path bullshit
 export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/ryan/.vimpkg/bin"
 export PATH="$PATH:/root/.gem/ruby/2.6.0/bin"
 export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/.local/bin"
 source /usr/share/nvm/init-nvm.sh
