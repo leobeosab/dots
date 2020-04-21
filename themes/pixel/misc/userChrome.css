@@ -56,17 +56,13 @@ toolbar#TabsToolbar {
      min-height: 0 !important;
      max-height: 0 !important;
      height: 0 !important;
-     --moz-transform: scaleY(0) !important;
-     transform: scaleY(0) !important;
-     transition: all 0.1s ease !important;
  }
 
+ 
  #nav-bar:focus-within
  #titlebar:hover~#nav-bar,
  #nav-bar:hover,
  #nav-bar:focus-within {
-     --moz-transform: scale(1) !important;
-     transform: scale(1) !important;
      max-height: 36px !important;
      height: 36px !important;
      min-height: 36px !important;
@@ -87,11 +83,6 @@ display: none;
 
 #pageActionButton { 
 display:none 
-}
-
-.urlbar-history-dropmarker,
-#urlbar:hover > .urlbar-textbox-container > .urlbar-history-dropmarker {
-  display: none !important;
 }
 
 #star-button {
@@ -124,19 +115,20 @@ display : none !important;
   border: none !important;
 }
 
+#urlbar-input-container {
+    height: 36px !important;
+}
+
+
 .tabbrowser-tab::before,
 
 .tabbrowser-tab::after {
-  display: none !important;
-}
+/*  display: none !important;
+*/}
 
 .tabbrowser-tab:not([pinned]):not(:hover) .tab-close-button { visibility: collapse !important; }
 
 .tabbrowser-tab:not([pinned]):hover .tab-close-button { visibility: visible !important; display: block !important; }
-
-#PanelUI-button { 
-display: none !important;
-}
 
 #titlebar {
     margin-top: -1px !important;
