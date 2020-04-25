@@ -23,7 +23,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xrandr --output VGA-1 --right-of HDMI-1 --auto
 
 # autostart
-exec --no-startup-id ~/dots/utils/desktop_setup.sh
+exec --no-startup-id ~/dots/utils/desktop_startup.sh
 exec compton --config ~/.config/compton/config
 exec ~/.config/polybar/launch.sh
 
