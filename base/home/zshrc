@@ -11,6 +11,10 @@ if [ -f ~/.machineconf ]; then
     source ~/.machineconf
 fi
 
+if [ -f ~/.cache/wal/sequences ]; then
+    (cat ~/.cache/wal/sequences &)
+fi
+
 # Exports
 export EDITOR='vim'
 
@@ -89,4 +93,6 @@ export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_pe
 export PATH="$PATH:/root/.gem/ruby/2.6.0/bin"
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/.local/bin"
+export GOPATH=$(go env GOPATH)
 source /usr/share/nvm/init-nvm.sh
+[ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_PLATFORMTHEME="qt5ct"

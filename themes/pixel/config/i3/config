@@ -22,6 +22,9 @@ exec --no-startup-id nm-applet
 # display setup
 exec --no-startup-id xrandr --output VGA-1 --right-of HDMI-1 --auto
 
+# pywal
+exec --no-startup-id wal -R
+
 # autostart
 exec --no-startup-id ~/dots/utils/desktop_startup.sh
 exec compton --config ~/.config/compton/config
@@ -160,7 +163,7 @@ workspace $ws9 output primary
 workspace $ws10 output HDMI1
 
 # border colors
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #3587a7
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   #e39c29
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #000000
 client.unfocused        #333333 #222222 #888888 #292d2e   #000000
 client.urgent           #2f343a #900000 #ffffff #900000   #900000

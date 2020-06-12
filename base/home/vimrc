@@ -111,6 +111,12 @@ set splitbelow
 set splitright
 
 "" Misc
+set noswapfile
+set nowrap
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set smartcase
 set number
 syntax on
 filetype plugin indent on
