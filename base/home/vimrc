@@ -25,7 +25,7 @@ Plugin 'stamblerre/gocode', {'rtp': 'vim/'}
 Plugin 'zchee/deoplete-go'
 Plugin 'relastle/bluewery'
 Plugin 'dracula/vim'
-Plugin 'shougo/deoplete.nvim'
+" Plugin 'shougo/deoplete.nvim'
 Plugin 'roxma/nvim-yarp'
 Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'bling/vim-airline'
@@ -65,7 +65,7 @@ set expandtab
 " ====================
 
 " START autocomplete
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 " END   autocomplete
 
 " ====================

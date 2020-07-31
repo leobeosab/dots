@@ -94,5 +94,8 @@ export PATH="$PATH:/root/.gem/ruby/2.6.0/bin"
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export GOPATH=$(go env GOPATH)
-source /usr/share/nvm/init-nvm.sh
+if [ -f /usr/share/nvm/init-nvm.sh ]
+then
+    source /usr/share/nvm/init-nvm.sh
+fi
 [ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_PLATFORMTHEME="qt5ct"

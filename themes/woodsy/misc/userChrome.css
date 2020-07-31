@@ -1,0 +1,148 @@
+@import 'colors.css';
+
+/*
+ * Hide tab bar on one tab
+ */
+#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"] {
+    visibility: collapse;
+}
+/* Hide New Tab Button immediately next to solo tab */
+#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"] + toolbarbutton {
+    visibility: collapse;
+}
+
+#tabbrowser-tabs, #tabbrowser-tabs > .tabbrowser-arrowscrollbox {
+	min-height: 0 !important;
+}
+
+/* Thanks to @Speravir for making it work again in the latest versions. */
+#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"] {
+	visibility: collapse;
+}
+
+/* I don't use tabs so I just hide the new tab button. You should be able to use a similar trick as the rule above with
+css siblings selectors if you want to keep it when the tab bar is visible. */
+#tabbrowser-tabs .tabs-newtab-button { 
+	visibility: collapse !important;
+}
+
+#tabbrowser-tabs tab {
+	min-height: var(--tab-min-height)
+}
+
+toolbar#TabsToolbar {
+	background-color: var(--background);
+}
+
+.tabbrowser-tab, .tab-stack, .tab-background, .tab-background-inner{
+	background-color: var(--background);
+}
+
+.tabbrowser-tab:not([selected]) .tab-content{
+    color: var(--color1) !important;
+}
+
+.tabbrowser-tab .tab-content{
+    color: var(--color5) !important;
+}
+
+#forward-button, #back-button {
+	display: none !important;
+}
+
+#nav-bar {
+     -moz-appearance: none !important;
+     background-color: var(--background);
+     min-height: 0 !important;
+     max-height: 0 !important;
+     height: 0 !important;
+ }
+
+ 
+ #nav-bar:focus-within
+ #titlebar:hover~#nav-bar,
+ #nav-bar:hover,
+ #nav-bar:focus-within {
+     max-height: 36px !important;
+     height: 36px !important;
+     min-height: 36px !important;
+ }
+
+#content-deck{
+    position:relative;
+    z-index: 0;
+}
+
+#statuspanel[type="overLink"] {
+  display: none !important;
+}
+
+#tracking-protection-icon-container {
+display: none;
+}
+
+#pageActionButton { 
+display:none 
+}
+
+#star-button {
+display:none;
+}
+
+#navigator-toolbox::after {
+  border-bottom: 0px !important;
+}
+
+#navigator-toolbox {
+  border: none !important;
+}
+
+#titlebar {
+  border: none !important;
+}
+
+.tab-line {
+display : none !important;
+}
+
+#nav-bar, #TabsToolbar {
+  border: none !important;
+}
+
+#urlbar-search-button {
+  background-color: none !important;
+  background-image: none !important;
+  border: none !important;
+}
+
+#urlbar-input-container {
+    height: 36px !important;
+}
+
+
+.tabbrowser-tab::before,
+
+.tabbrowser-tab::after {
+/*  display: none !important;
+*/}
+
+.tabbrowser-tab:not([pinned]):not(:hover) .tab-close-button { visibility: collapse !important; }
+
+.tabbrowser-tab:not([pinned]):hover .tab-close-button { visibility: visible !important; display: block !important; }
+
+#titlebar {
+    margin-top: -1px !important;
+    margin-bottom: none !important;
+}
+window[sizemode="maximized"] #titlebar {
+    margin-top: -1px !important;
+    margin-bottom: none !important;
+}
+
+:root:-moz-lwtheme {
+    --toolbox-border-bottom-color: rgba(0,0,0,.0) !important;
+}
+
+#nav-bar {
+    box-shadow: none !important;
+}
